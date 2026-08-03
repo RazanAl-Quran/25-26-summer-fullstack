@@ -80,3 +80,19 @@ fetch('https://digimon-api.vercel.app/api/digimon/level/rookie')
 
 console.log('hi3');
 console.log('hi4');
+
+
+
+console.log('hi1');
+
+async function fetchDigimonNames() {
+        const response = await fetch('https://digimon-api.vercel.app/api/digimon');
+        const data = await response.json();
+        const names = data.map(digimon => digimon.name);
+        console.log('Digimon Names:', names);
+}
+fetchDigimonNames();
+console.log('hi3');
+console.log('hi4');
+
+
